@@ -1,8 +1,8 @@
 <?php
 
-namespace Core\BoundedContext\Courses\Domain;
+namespace Core\BoundedContext\Course\Domain;
 
-use Core\BoundedContext\Course\Domain\ValueObject\CourseId;
+use Core\BoundedContext\Course\Domain\ValueObjects\CourseId;
 
 interface CourseRepository {
     public function list(): Courses;

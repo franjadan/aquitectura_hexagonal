@@ -1,6 +1,6 @@
 <?php
 
-namespace Core\BoundedContext\Courses\Domain;
+namespace Core\BoundedContext\Course\Domain;
 
 use Core\Shared\Domain\Collection;
 
