@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use Core\Shared\Domain\UuidGenerator;
+use Core\Shared\Infrastructure\RamseyUuidGenerator;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +15,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind(
+            UuidGenerator::class,
+            RamseyUuidGenerator::class,
+        );
+
     }
 
     /**
