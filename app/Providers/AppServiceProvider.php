@@ -23,6 +23,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        /**
+         * Load BoundedContext migrations
+         */
+
+         $this->loadMigrationsFrom(
+            \File::allFiles(base_path("src/BoundedContext/**/Infrastructure/migrations"))
+         );
     }
 }
